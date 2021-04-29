@@ -1,5 +1,9 @@
-$white: #f2f2f2;
-$grey: #7c7c7c;
+$white: #FFFFFF;
+/*$grey: #7c7c7c;*/
+$grey: #485550;
+$grey-light: #F4F6F0;
+$green: #8FCD4A;
+$shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
 
 body {
@@ -13,7 +17,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #31510E;
+    background-color: $grey; /*#31510E*/
     height: 2em;
     color: $white;
 }
@@ -29,31 +33,35 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    align-content: center;
     height: auto;
     width: 20em;
     margin-right: 1em;
     overflow: hidden;
+    a {
+        color: $white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        &:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        &:active {
+            background-color: royalblue;
+            color: $white;
+        }
+    }
 }
-  
-  nav a {
-    color: $white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
 
-  nav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  nav a:active {
-    background-color: royalblue;
-    color: $white;
-  }
-
+.nav__user {
+    background-color: $white;
+    color: $grey;
+    /*padding: 0.25em 1em;*/
+    border-radius: 5px;
+    
+}
 
     .header__logo {
         width: auto;
@@ -68,11 +76,6 @@ nav {
     .follow_icone {
         color: #ddd;
         margin: 0em 0.5em 0em 0.5em;
-    }
-    
-    .nav__icone:hover {
-        padding: 16px 10px;
-        background-color: #ddd;
     }
 
     h1 {
@@ -93,7 +96,7 @@ nav {
         display: flex;
         flex-direction: column;
         header {
-            background-color: #8FCD4A;
+            background-color: $green;
             text-align: right;
             width: 100%;
             h1 {
@@ -128,13 +131,6 @@ nav {
     }
     */
 
-    .connexion {
-        font-size: 0.5em;
-        background-color: $white;
-        padding: 0.25em 1em;
-        border-radius: 5%;
-    }
-
     button {
         background-color: #333;
         color: $white;
@@ -144,7 +140,7 @@ nav {
         padding: 10px 0px;
         text-align: center;
         border: none;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        box-shadow: $shadow;
         a {
             font-family: "Montserrat";
         color: $white;
@@ -179,6 +175,16 @@ nav {
         flex: 1;
     }
 
+    .left {
+        background-color: $white;
+        height: fit-content;
+        width: fit-content;
+        margin: 2em;
+        justify-content: center;
+        line-height: 30px;
+        box-shadow: $shadow;
+    }
+
     .formation__informatique {
         background-image: url('./img/informatique.jpeg');
     }
@@ -195,11 +201,25 @@ nav {
     .padding_lr {
         padding: 0em 1em 0em 1em;
     }
+    .contact {
+        background-color: $grey-light;
+    }
+
+    .info_contact {
+        > ul > li {
+            font-weight: bold;
+            > ul {
+                font-weight: normal;
+            }
+        }
+    }
+    
 
     .info_form {
         display: flex;
         flex-direction: column;
         justify-content: left;
+        /*background-color: $white;*/
         /*padding-bottom: 1em;*/
         img {
             margin: 0em 1em 0em 0em;
@@ -208,7 +228,7 @@ nav {
         height: 2em;
         width: 50%;
         &:hover {
-            background-color: $white;
+            background-color: $grey-light;
         }
         }
         hr {
@@ -228,5 +248,21 @@ nav {
     }
 
     .shadow {
-        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        box-shadow: $shadow;
+    }
+
+    fieldset {
+        border: none;
+        box-shadow: $shadow;
+        padding: none;
+        background-color: $white;
+    }
+
+    .white-round {
+        border-radius: 50%;
+        background-color: $white;
+        height: 1.5em;
+        width: 1.5em;
+        text-align: center;
+        align-items: center;
     }

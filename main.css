@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*$grey: #7c7c7c;*/
 body {
   margin: 0;
   font-family: 'Montserrat';
@@ -10,15 +11,16 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #31510E;
+  background-color: #485550;
+  /*#31510E*/
   height: 2em;
-  color: #f2f2f2;
+  color: #FFFFFF;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  background-color: #7c7c7c;
+  background-color: #485550;
   height: 2.5em;
 }
 
@@ -26,7 +28,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  align-content: center;
   height: auto;
   width: 20em;
   margin-right: 1em;
@@ -34,7 +36,7 @@ nav {
 }
 
 nav a {
-  color: #f2f2f2;
+  color: #FFFFFF;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -48,7 +50,14 @@ nav a:hover {
 
 nav a:active {
   background-color: royalblue;
-  color: #f2f2f2;
+  color: #FFFFFF;
+}
+
+.nav__user {
+  background-color: #FFFFFF;
+  color: #485550;
+  /*padding: 0.25em 1em;*/
+  border-radius: 5px;
 }
 
 .header__logo {
@@ -66,18 +75,13 @@ nav a:active {
   margin: 0em 0.5em 0em 0.5em;
 }
 
-.nav__icone:hover {
-  padding: 16px 10px;
-  background-color: #ddd;
-}
-
 h1 {
   margin-right: 1em;
   margin-top: 0em;
 }
 
 .welcome_h2 {
-  color: #f2f2f2;
+  color: #FFFFFF;
   background-color: rgba(20, 20, 20, 0.5);
   text-align: center;
   width: 20em;
@@ -126,16 +130,9 @@ section header h1 {
         margin: 1em 1em auto auto;
     }
     */
-.connexion {
-  font-size: 0.5em;
-  background-color: #f2f2f2;
-  padding: 0.25em 1em;
-  border-radius: 5%;
-}
-
 button {
   background-color: #333;
-  color: #f2f2f2;
+  color: #FFFFFF;
   overflow: hidden;
   border-radius: 5px;
   text-decoration: none;
@@ -147,7 +144,7 @@ button {
 
 button a {
   font-family: "Montserrat";
-  color: #f2f2f2;
+  color: #FFFFFF;
   border: none;
   text-decoration: none;
   padding: 15px 32px;
@@ -156,7 +153,7 @@ button a {
 }
 
 button a:hover {
-  background-color: #f2f2f2;
+  background-color: #FFFFFF;
   color: black;
 }
 
@@ -179,6 +176,16 @@ button a:hover {
   flex: 1;
 }
 
+.left {
+  background-color: #FFFFFF;
+  height: fit-content;
+  width: fit-content;
+  margin: 2em;
+  justify-content: center;
+  line-height: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
 .formation__informatique {
   background-image: url("./img/informatique.jpeg");
 }
@@ -199,10 +206,23 @@ button a:hover {
   padding: 0em 1em 0em 1em;
 }
 
+.contact {
+  background-color: #F4F6F0;
+}
+
+.info_contact > ul > li {
+  font-weight: bold;
+}
+
+.info_contact > ul > li > ul {
+  font-weight: normal;
+}
+
 .info_form {
   display: flex;
   flex-direction: column;
   justify-content: left;
+  /*background-color: $white;*/
   /*padding-bottom: 1em;*/
 }
 
@@ -216,11 +236,11 @@ button a:hover {
 }
 
 .info_form input:hover {
-  background-color: #f2f2f2;
+  background-color: #F4F6F0;
 }
 
 .info_form hr {
-  background-color: #7c7c7c;
+  background-color: #485550;
   width: 50%;
   margin-left: 0%;
   margin-top: 0%;
@@ -237,5 +257,21 @@ button a:hover {
 
 .shadow {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+fieldset {
+  border: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding: none;
+  background-color: #FFFFFF;
+}
+
+.white-round {
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  height: 1.5em;
+  width: 1.5em;
+  text-align: center;
+  align-items: center;
 }
 /*# sourceMappingURL=main.css.map */
