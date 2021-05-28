@@ -5,21 +5,30 @@ $grey-light: #F4F6F0;
 $green: #8FCD4A;
 $shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
+.grey-bg {
+    background-color: $grey;
+}
+
+.green-bg {
+    background-color: $green;
+}
 
 body {
     margin: 0;
     font-family: 'Montserrat';
     height: auto;
-    width: auto;
+    width: 100%;
+    height: 100%;
   }
 
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $grey; /*#31510E*/
-    height: 2em;
-    color: $white;
+    //background-color: $grey; /*#31510E*/
+    height: 100%;
+    width: 100%;
+    //color: $white;
 }
 
 header {
@@ -29,6 +38,7 @@ header {
     height: 2.5em;
 }
 
+/*
 nav {
     display: flex;
     flex-direction: row;
@@ -58,11 +68,9 @@ nav {
 .nav__user {
     background-color: $white;
     color: $grey;
-    /*padding: 0.25em 1em;*/
     border-radius: 5px;
-    
 }
-
+*/
     .header__logo {
         width: auto;
         height: 2.5em;
@@ -70,7 +78,13 @@ nav {
 
     .icone {
         width: auto;
-        height: 1em;
+        height: 1.5em;
+    }
+    .arrow {
+        &:hover {
+            width: auto;
+            height: 2em;
+        }
     }
 
     .follow_icone {
@@ -87,8 +101,8 @@ nav {
         color: $white;
         background-color: rgba(20, 20, 20, 0.5);
         text-align: center;
-        width: 20em;
-        padding: 2em 0em 2em 0em;
+        //width: 20em;
+        padding: 1em;
     }
 
     section {
@@ -109,7 +123,9 @@ nav {
         background-image: url('./img/background.png');
         background-repeat: no-repeat;
         background-size: cover;
+        display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
 
@@ -175,15 +191,7 @@ nav {
         flex: 1;
     }
 
-    .left {
-        background-color: $white;
-        height: fit-content;
-        width: fit-content;
-        margin: 2em;
-        justify-content: center;
-        line-height: 30px;
-        box-shadow: $shadow;
-    }
+    
 
     .formation__informatique {
         background-image: url('./img/informatique.jpeg');
@@ -197,39 +205,32 @@ nav {
     .formation__hotel {
         background-image: url('./img/hôtel.jpeg');
     }
-
-    .padding_lr {
-        padding: 0em 1em 0em 1em;
-    }
-    .contact {
-        background-color: $grey-light;
-    }
-
-    .info_contact {
-        > ul > li {
-            font-weight: bold;
-            > ul {
-                font-weight: normal;
-            }
-        }
-    }
     
+    .left {
+        box-shadow: $shadow;
+        padding: 1em;
+    }
 
-    .info_form {
+    .left,.info_form {
+        margin: 1em;
         display: flex;
         flex-direction: column;
         justify-content: left;
-        /*background-color: $white;*/
-        /*padding-bottom: 1em;*/
-        img {
+        i {
             margin: 0em 1em 0em 0em;
         }
-        input {
+    }
+
+    .info_form {
+        input,#msg {
         height: 2em;
         width: 50%;
         &:hover {
             background-color: $grey-light;
         }
+        }
+        #msg {
+            height: 3em;
         }
         hr {
             background-color: $grey;
@@ -237,7 +238,7 @@ nav {
             margin-left: 0%;
             margin-top: 0%;
         }
-        label {
+        label,input[type="submit"] {
             margin-bottom: 0.5em;
             margin-top: 0.5em;
         }

@@ -3,221 +3,340 @@
     <head>
         <title>Afpa</title>
         <link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Boostrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
         </style>
+
+        <!--Font awesome icons-->
+        <script src="https://kit.fontawesome.com/eaf337826d.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header>
-            <div>
-                <a href="https://www.afpa.fr/">
-                <img src="./img/logo_afpa.jpeg" class="header__logo">
-                </a>
+        <!-- Header -->
+        <div class="container-fluid">
+            <div class="row grey-bg">
+                <nav class="col navbar navbar-expand-lg navbar-dark">
+                    <a class="navbar-brand" href="https://www.afpa.fr/">
+                        <img class="header__logo" src="./img/logo_afpa.jpeg" alt="logo">
+                        
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="navbarContent" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                               <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Activités
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="#orientation">Orientation</a>
+                                  <a class="dropdown-item" href="#formation">Formation</a>
+
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                               <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </nav>
+            </div>
+        </div>
+
+
+        <!-- Content -->
+        <div class="container-fluid">
+            <div class="row green-bg">
+                <div class="col-12">
+                    
+                    <h1>Accueil</h1>
+                    
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <section class="col-12 welcome_section">
+                            <div><h2 class="welcome_h2">Les Prestations du centre Afpa</h2></div>
+                            <div>
+                                <button><a href="#contact">En savoir plus</a></button>
+                            </div>
+                            <div>
+                                    <a href="#activité">
+                                    <img src="img/icone/arrow.png" class="icone arrow">
+                                    </a>
+                                
+                            </div>
+                        
+                        </section>
+                </div>
             </div>
             
-            <nav>
-                <a href="index.html">
-                    <img src="./img/icone/home.png" class="icone">
-                </a>
-                <a href="#activité">Activité</a>
-                <a href="#contact">Contact</a>
-                <a href="connexion.html" target="_blank">
-                    <img src="img/icone/account.png" class="icone">
-                </a>
-                
-                <a href="#" class="nav__user">User 1</a>
-            </nav>
-        
-        </header>
-        
-        <section class="welcome_section">
-            <header>
-                <h1>Accueil</h1>
-            </header>
-                <h2 class="welcome_h2">Les Prestations du centre Afpa</h2>
-                <div>
-                    <button><a href="#contact">En savoir plus</a></button>
-                </div>
-                <div>
-                        <a href="#activité">
-                        <img src="img/icone/arrow.png" class="icone">
-                        </a>
+            <!-- Orientation -->
+            <div class="row green-bg">
+                <div class="col-12">
                     
-                </div>
-        </section>
-
-        <section class="activités" id="activité">
-            <header>
-                <h1>Orientation</h1>
-                
-            </header>
-            <article class="orientation_section padding_lr">
-                <div>
-                    <h2>Valoriser votre capital compétences,<br> 
-                        Optimiser vos ressources humaines</h2>
-                    <ul>
-                        <li>Recrutement interne et externe, avec analyse de poste</li>
-                        <li>
-                            Conseil à l’évolution de carrière</li>
-                        <li>Conduite d’actions de développement personnel</li>
-                        <li>Bilan de compétences</li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>Professionnaliser vos acteurs</h2>
-                    <ul>
-                        <li>Développement des compétences d’encadrement et de communication</li>
-                        <li>Impulsion de nouvelles démarches en ressources humaines par l’animation d’équipes et la formation à l’entretien professionnel</li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>Accompagner l’évolution de vos organisations,<br>
-                        Anticiper les mutations industrielles</h2>
-                    <ul>
-                        <li>Diagnostic d’entreprise</li>
-                        <li>Conseil en formation</li>
-                        <li>Accompagnement au changement des salariés</li>
-                        <li>Etudes prospectives des métiers et des emplois grâce à notre observatoire régional</li>
-                    </ul>
-                </div>
-            </article>
-            <header>
-                <h1>Formation</h1>
-                
-            </header>
-            <article class="formation">
-                <div class="half">
-                    <div class="half-pic formation__informatique"></div>
-                    <div class="half-txt padding_lr">
-                        <h2>Un Centre à la pointe de l’Informatique</h2>
-                        <p>
-                            Grâce à l’importance des moyens et du savoir-faire mis en oeuvre, 
-                            l’AFPA Créteil est aujourd’hui l’un des leaders dans le secteur de l’informatique.
-                            Nous développons des compétences couvrant l’ensemble des processus d’informatisation 
-                            et de communication des entreprises. 
-                            Une veille technologique nous permet en outre d’être opérationnels à chaque grand défi.
-                        </p>
-                    </div>
-                </div>
-                <div class="half inverse">
-                    <div class="half-pic formation__hotel"></div>
-                    <div class="half-txt padding_lr">
-                        <h2>Une Référence pour les métiers de l’hôtellerie</h2>
-                        <p>
-                            Parce que nous répondons aux exigences actuelles de 
-                            l’hôtellerie et que nous sommes en relations permanente 
-                            avec les entreprises du secteur, nos formations 
-                            (employé polyvalent, gouvernante d’hôtel, réceptionniste, etc.) 
-                            font référence auprès des professionnels.
-                        </p>
-                    </div>
-                </div>
-                <div class="half">
-                    <div class="half-pic formation__textile"></div>
-                    <div class="half-txt padding_lr">
-                        <h2>Les formations de demain dans l’industrie du textile</h2>
-                        <p>
-                            De la fabrication à la gestion de production en passant par 
-                            l’entretien des textiles, notre centre prépare à des savoir-faire 
-                            uniques en Île-de-France pour répondre aux futurs besoins des 
-                            entreprises.
-                            L’AFPA Créteil bénéficie d’ailleurs d’une reconnaissance 
-                            “d’expert” à l’échelon international.
-                        </p>
-                    </div>
-                </div>
-                <div class="half inverse">
-                    <div class="half-pic formation__vente"></div>
-                    <div class="half-txt padding_lr">
-                        <h2>Des méthodes éprouvées en vente et distribution</h2>
-                        <p>
-                            Aide à la mobilité interne, formation “complémentarisée” 
-                            (principes et méthodes de vente, connaissance technique 
-                            des produits) et valorisation du savoir-faire commercial 
-                            par l’alternance, tels sont les atouts de notre secteur 
-                            vente/distribution.
-                        </p>
-                    </div>
-                </div>
-            </article>
-        </section>
-        <section id="contact">
-            <header>
-                <h1>Contact</h1>
-            </header>
-            <div class="half contact">
-                <div class="half-txt left info_contact">
+                    <h1 id="orientation">Orientation</h1>
                     
-                    <ul>
-                        <li>Nos coordonnées
-                            <ul>
-                                <li>244 Route de Turin</li>
-                                <li>06300 Nice</li>
-                            </ul>
-                        </li>
-                        <br>
-                        <li>Votre formateur
-                            <ul>
-                                <li>Benoit Hézard</li>
-                                <li>04 93 27 63 00</li>
-                                <li><a href="mailto: benoit.hezard@afpa.fr" target="_blank">benoit.hezard@afpa.fr</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="half-txt">
-                    <form method="post" action="traitement.php">
-                        <fieldset>
-                            <legend>Vos coordonnées</legend>
-        
-                            <div class="info_form">
-                                
-                                <label for="prénom" autofocus required><img src="./img/icone/name.png" class="icone">Nom Prénom :</label>
-                               
-                            <input type="text" name="prénom" id="prénom" placeholder="Ex: Patrick Sébastien" class="no_border"/>
-                            <hr>
-                            </div>
-                            
-                            
-                            <div class="info_form">
-                                
-                                <label for="email" required><img src="./img/icone/mail.png" class="icone">E-mail :</label>
-                                
-                            <input type="email" name="email" id="email" class="no_border"/>
-                            <hr>
-                            </div>
-                            
-                            
-                            <div class="info_form">
-                                
-                                <label for="tel"><img src="./img/icone/telephone.png" class="icone">Téléphone :</label>
-                                
-                                <input type="tel" name="tel" id="tel" class="no_border"/>
-                                <hr>
-                            </div>
-                            
-                            <!--
-                            <br>
-                            <label for="pass">Votre mot de passe :</label>
-                            <input type="password" name="pass" id="pass" />
-                                -->
-                                <div class="info_form">
-                                    
-                                    <label for="msg" required><img src="./img/icone/msg.png" class="icone">Votre message :</label>
-                                    <textarea name="msg" id="msg"></textarea>
-                                </div>
-                            
-                        
-                            <input type="submit" value="Envoyer" />
-                            </fieldset>
-                        
-                    </form>
                 </div>
             </div>
-        </section>
-        
-        <footer>
-            <p>Crédits + copyrights | Nous suivre <img src="./img/icone/facebook.png" class="icone follow_icone white-round"><img src="./img/icone/twitter.png" class="icone follow_icone white-round"><img src="./img/icone/linkedin.png" class="icone follow_icone white-round"></p>
+            <div class="container">
+                <div class="row">
+                    <article class="col-12 orientation_section">
+                        
+                            <div class="card">
+                                <h2>Valoriser votre capital compétences,<br> 
+                                    Optimiser vos ressources humaines</h2>
+                                <ul>
+                                    <li>Recrutement interne et externe, avec analyse de poste</li>
+                                    <li>
+                                        Conseil à l’évolution de carrière</li>
+                                    <li>Conduite d’actions de développement personnel</li>
+                                    <li>Bilan de compétences</li>
+                                </ul>
+                            </div>
+                            <div class="card">
+                                <h2>Professionnaliser vos acteurs</h2>
+                                <ul>
+                                    <li>Développement des compétences d’encadrement et de communication</li>
+                                    <li>Impulsion de nouvelles démarches en ressources humaines par l’animation d’équipes et la formation à l’entretien professionnel</li>
+                                </ul>
+                            </div>
+                            <div class="card">
+                                <h2>Accompagner l’évolution de vos organisations,<br>
+                                    Anticiper les mutations industrielles</h2>
+                                <ul>
+                                    <li>Diagnostic d’entreprise</li>
+                                    <li>Conseil en formation</li>
+                                    <li>Accompagnement au changement des salariés</li>
+                                    <li>Etudes prospectives des métiers et des emplois grâce à notre observatoire régional</li>
+                                </ul>
+                            </div>
+                        </article>
+                </div>
+
+            </div>
+
+            <!-- Formation -->
+            <div class="row green-bg">
+                <div class="col-12">
+                    
+                    <h1 id="formation">Formation</h1>
+                    
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <article class="formation">
+                            <div class="half">
+                                <div class="half-pic formation__informatique"></div>
+                                <div class="half-txt padding_lr">
+                                    <h2>Un Centre à la pointe de l’Informatique</h2>
+                                    <p>
+                                        Grâce à l’importance des moyens et du savoir-faire mis en oeuvre, 
+                                        l’AFPA Créteil est aujourd’hui l’un des leaders dans le secteur de l’informatique.
+                                        Nous développons des compétences couvrant l’ensemble des processus d’informatisation 
+                                        et de communication des entreprises. 
+                                        Une veille technologique nous permet en outre d’être opérationnels à chaque grand défi.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="half inverse">
+                                <div class="half-pic formation__hotel"></div>
+                                <div class="half-txt padding_lr">
+                                    <h2>Une Référence pour les métiers de l’hôtellerie</h2>
+                                    <p>
+                                        Parce que nous répondons aux exigences actuelles de 
+                                        l’hôtellerie et que nous sommes en relations permanente 
+                                        avec les entreprises du secteur, nos formations 
+                                        (employé polyvalent, gouvernante d’hôtel, réceptionniste, etc.) 
+                                        font référence auprès des professionnels.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="half">
+                                <div class="half-pic formation__textile"></div>
+                                <div class="half-txt padding_lr">
+                                    <h2>Les formations de demain dans l’industrie du textile</h2>
+                                    <p>
+                                        De la fabrication à la gestion de production en passant par 
+                                        l’entretien des textiles, notre centre prépare à des savoir-faire 
+                                        uniques en Île-de-France pour répondre aux futurs besoins des 
+                                        entreprises.
+                                        L’AFPA Créteil bénéficie d’ailleurs d’une reconnaissance 
+                                        “d’expert” à l’échelon international.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="half inverse">
+                                <div class="half-pic formation__vente"></div>
+                                <div class="half-txt padding_lr">
+                                    <h2>Des méthodes éprouvées en vente et distribution</h2>
+                                    <p>
+                                        Aide à la mobilité interne, formation “complémentarisée” 
+                                        (principes et méthodes de vente, connaissance technique 
+                                        des produits) et valorisation du savoir-faire commercial 
+                                        par l’alternance, tels sont les atouts de notre secteur 
+                                        vente/distribution.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact -->
+            <div class="row green-bg">
+                <div class="col-12">
+                    
+                    <h1 id="contact">Contact</h1>
+                    
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6"> <!-- Info centre -->
+                        
+                            <H3>Nos coordonnées</H3>
+                            <div class="card left">
+                                
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-map-marker-alt"></i>244 Route de Turin</li>
+                                        <li>06300 Nice</li>
+                                    </ul>
+                            </div>
+                            <H3>Votre formateur</H3>
+                            <div class="card left">
+                                
+                                    <ul class="list-unstyled">
+                                        <li>Benoit Hézard</li>
+                                        <li><i class="fas fa-phone"></i>04 93 27 63 00</li>
+                                        <li><i class="fas fa-envelope"></i><a href="mailto: benoit.hezard@afpa.fr" target="_blank">benoit.hezard@afpa.fr</a></li>
+                                    </ul>
+                                </li>
+                            </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+
+                            <h3>Vos coordonnées</h3>
+                            <form method="post" action="traitement.php">
+                                <fieldset>
+                                    
+                
+                                    <div class="info_form">
+                                        
+                                        <label for="prénom" autofocus required><i class="fa fa-id-card" aria-hidden="true"></i>Nom Prénom :</label>
+                                       
+                                        <input type="text" name="prénom" id="prénom" placeholder="Ex: Elton John" class="no_border"/>
+                                        <hr>
+                                    
+                                        
+                                        <label for="email" required><i class="fas fa-envelope"></i>E-mail :</label>
+                                        
+                                        <input type="email" name="email" id="email" class="no_border"/>
+                                        <hr>
+
+                                        <label for="tel"><i class="fas fa-phone"></i>Téléphone :</label>
+                                        
+                                        <input type="tel" name="tel" id="tel" class="no_border"/>
+                                        <hr>
+
+                                        <label for="msg" required><i class="fa fa-comment" aria-hidden="true"></i>Votre message :</label>
+                                        <textarea name="msg" id="msg"></textarea>
+                                    
+                                
+                            
+                                        <input type="submit" value="Envoyer" />
+                                    </div>
+                                </fieldset>
+                                
+                            </form>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+                
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-center text-white">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+                <div class="row">
+                    <div class="col-lg-4 col-md-9 mb-4 mb-md-0">
+                        <img src="./img/logo_afpa.jpeg" width=auto height="70" alt="logo">
+                    
+                    <p>
+                        L'AFPA, OPERATEUR MAJEUR DE LA FORMATION PROFESSIONNELLE DES ADULTES
+
+                      </p>
+                    </div>
+                    <div class="col-lg-4 col-md-9 mb-4 mb-md-0">
+                        
+                        <!-- Section: CTA -->
+                        <section class="">
+                            <p class="d-flex justify-content-center align-items-center">
+                            <span class="me-3">Recevoir des informations</span>
+                            <button type="button" class="btn btn-outline-light btn-rounded">
+                                Inscrivez-vous !
+                            </button>
+                            </p>
+                        </section>
+                    </div>
+                    <div class="col-lg-4 col-md-9 mb-4 mb-md-0">
+                        <h5>Nous Suivre :</h5>
+                        <!-- Section: Social media -->
+                        <section class="mb-4">
+                            <!-- Facebook -->
+                            <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/AFPA.JEUNES" role="button"
+                            ><i class="fab fa-facebook-f"></i
+                            ></a>
+                    
+                            <!-- Twitter -->
+                            <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/afpa_formation" role="button"
+                            ><i class="fab fa-twitter"></i
+                            ></a>
+                    
+                            <!-- Linkedin -->
+                            <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/school/afpa/" role="button"
+                            ><i class="fab fa-linkedin-in"></i
+                            ></a>
+                    
+                        </section>
+                        <!-- Section: Social media -->
+                    </div>
+                </div>
+                
+              
+            </div>
+            <!-- Grid container -->
+          
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2021 Copyright:
+                <a class="text-white">Léa Dieudonat</a>
+              </div>
+              <!-- Copyright -->
         </footer>
+
+
+        <!-- jQuery, Popper.js, Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </body>
 </html>
