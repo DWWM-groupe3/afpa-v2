@@ -6,15 +6,41 @@
 }
 
 .green-bg {
-  background-color: #8FCD4A;
+  background: url(./img/svg/wave.svg);
+  background-repeat: no-repeat;
+  background-position-y: top;
+}
+
+.transparent-bg {
+  background: none;
+}
+
+.margin-bottom {
+  margin-bottom: 3em;
 }
 
 body {
   margin: 0;
   font-family: 'Montserrat';
-  height: auto;
   width: 100%;
   height: 100%;
+}
+
+footer {
+  margin: 0;
+}
+
+nav button[type="submit"] {
+  background-color: #FFFFFF;
+  border-radius: 0 5px 5px 0;
+}
+
+nav a {
+  color: #FFFFFF;
+}
+
+nav a:hover {
+  color: #8FCD4A;
 }
 
 /*
@@ -53,6 +79,7 @@ nav {
 .header__logo {
   width: auto;
   height: 2.5em;
+  border-radius: 5px;
 }
 
 .icone {
@@ -100,22 +127,42 @@ section {
   height: 100%;
   display: flex;
   flex-direction: row;
-  text-align: left;
+  text-align: center;
+  align-items: center;
+  margin: 1em 0 1em 0;
+}
+
+.orientation_section img {
+  width: auto;
+  height: 10em;
 }
 
 .orientation_section .card {
   margin: auto;
   padding: 1em;
-  height: 100%;
+  height: auto;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   width: auto;
+  text-align: left;
 }
 
 .orientation_section .card h3 {
   font-size: 1em;
 }
 
-button {
+#orientation1 {
+  background-color: lightyellow;
+}
+
+#orientation2 {
+  background-color: lightblue;
+}
+
+#orientation3 {
+  background-color: lightcoral;
+}
+
+.button-resp {
   background-color: #333;
   color: #FFFFFF;
   overflow: hidden;
@@ -127,7 +174,7 @@ button {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-button a {
+.button-resp a {
   font-family: "Montserrat";
   color: #FFFFFF;
   border: none;
@@ -137,7 +184,7 @@ button a {
   text-align: center;
 }
 
-button a:hover {
+.button-resp a:hover {
   background-color: #FFFFFF;
   color: black;
 }
@@ -154,17 +201,47 @@ button a:hover {
 
 .half-pic {
   background-size: cover;
-  flex: 1;
 }
 
-.half-txt {
-  flex: 1;
-}
-
-.formation__informatique {
+.bg-informatique {
   background-image: url("./img/informatique.jpeg");
+  background-size: cover;
+  margin-bottom: 1em;
 }
 
+.bg-hotel {
+  background-image: url("./img/hôtel.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 1em;
+}
+
+.bg-textile {
+  background-image: url("./img/textile.jpeg");
+  background-size: cover;
+  margin-bottom: 1em;
+}
+
+.bg-vente {
+  background-image: url("./img/grocery.jpeg");
+  background-size: cover;
+  margin-bottom: 1em;
+}
+
+.blur-box {
+  color: #FFFFFF;
+  margin: 2em;
+  background: none;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/*
+    .formation__informatique {
+        background-image: url('./img/informatique.jpeg');
+    }
+    */
 .formation__textile {
   background-image: url("./img/textile.jpeg");
 }
@@ -240,5 +317,92 @@ fieldset {
   width: 1.5em;
   text-align: center;
   align-items: center;
+}
+
+/* Slideshow */
+/* Slideshow container */
+.slideshow-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  height: auto;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 1em;
+  text-align: center;
+}
+
+.mySlides img {
+  height: 7em;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prev {
+  left: 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #485550;
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #485550;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #8FCD4A;
+}
+
+/* Add an italic font style to all quotes */
+q {
+  font-style: italic;
+}
+
+/* Add a blue color to the author */
+.author {
+  color: cornflowerblue;
 }
 /*# sourceMappingURL=main.css.map */
