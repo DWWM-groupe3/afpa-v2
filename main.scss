@@ -5,6 +5,7 @@ $white: #FFFFFF;
 $grey: #485550;
 $grey-light: #F4F6F0;
 $green: #8FCD4A;
+$cream: #fffdd8;
 $shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
 .grey-bg {
@@ -38,6 +39,17 @@ footer {
     margin: 0;
 }
 nav {
+    font-variant: small-caps;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    button.navbar-toggler {
+        margin-right: 1em;
+    }
+    :nth-child(3) {
+        flex: 1;
+    }
     button[type="submit"] {
         background-color: $white;
         border-radius: 0 5px 5px 0;
@@ -48,7 +60,11 @@ nav {
             color: $green;
         }
     }
+    li.active {
+        border-radius: 10px;
+    }
 }
+
 /*
 nav {
     display: flex;
@@ -82,10 +98,21 @@ nav {
     border-radius: 5px;
 }
 */
-    .header__logo {
-        width: auto;
+    .header-logo {
+        background-image: url('./img/logo-AFPA.jpeg');
+        background-size: 140%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: black;
+        width: 2.5em;
         height: 2.5em;
-        border-radius: 5px;
+        border-radius: 50%;
+        -webkit-box-shadow: 0px 0px 14px 5px #FFFFFF; 
+        box-shadow: 0px 0px 14px 5px #ffffff91;
+        &:hover {
+            width: 3em;
+            height: 3em;
+        }
     }
 
     .icone {
@@ -307,15 +334,6 @@ nav {
         background-color: $white;
     }
 
-    .white-round {
-        border-radius: 50%;
-        background-color: $white;
-        height: 1.5em;
-        width: 1.5em;
-        text-align: center;
-        align-items: center;
-    }
-
 /* Slideshow */
 
 /* Slideshow container */
@@ -400,3 +418,44 @@ nav {
   
   /* Add a blue color to the author */
   .author {color: cornflowerblue;}
+
+/* ------------------ Inscription --------------------- */
+#inscription-title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.inscription-form {
+    padding: 1em;
+    hr {
+        width: 25%;
+        border-top: thick solid $green;
+    }
+    input {
+        height: 2em;
+        width: 50%;
+        &:hover {
+            background-color: $grey-light;
+        }
+        }
+    input[type="submit"] {
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+        border-radius: 20px;
+        width: 25%;
+        color: $white;
+        background-color: $green;
+        font-weight: bold;
+        &:hover {
+            background-color: $grey;
+        }
+    }
+    legend {
+        background-color: $green;
+        width: fit-content;
+        padding: 0.5em;
+        font-variant: small-caps;
+    }
+    div.inscription-info > * {
+        padding: 0.5em;
+    }
+}
