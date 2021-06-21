@@ -10,67 +10,27 @@
         <!--Font awesome icons-->
         <script src="https://kit.fontawesome.com/eaf337826d.js" crossorigin="anonymous"></script>
 
-        <!-- Style -->
-        <link rel="stylesheet" href="main.css">
+
+
+        <!-- JS -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+        <script src="main.js" defer></script>
+        <script src="slide.js" defer></script>
 
         <!-- jQuery, Popper.js, Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer></script>
+
+        <!-- Style -->
+        <link rel="stylesheet" href="main.css">
     </head>
     <body>
         <!-- Nav -->
         <!--<div id="nav-content" class="nav-content"></div>-->
 
-                <!-- Header -->
-                <nav class="container-fluid navbar navbar-expand-lg navbar-dark grey-bg">
+        <?php include("nav.php"); ?>
 
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div id="navbarContent" class="collapse navbar-collapse">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                               <a href="index.html" class="nav-link">Home</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="dropdown-toggle nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Activités
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                  <a class="dropdown-item" href="#orientation">Orientation</a>
-                                  <a class="dropdown-item" href="#formation">Formation</a>
-        
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                               <a id="contact-page" class="nav-link" href="./contact.html">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="btn btn-outline-light btn-rounded" href="./inscription.html">Je m'inscris</a>
-                             </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="https://www.afpa.fr/">
-                          <div class="header-logo"></div>
-                            
-                        </a>
-                    </div>
-
-                    <form class="navbar-form navbar-left">
-                        <!-- <form class="navbar-form navbar-left" action="/action_page.php"> -->
-                        <div class="input-group">
-                          <input type="text" class="form-control" placeholder="Chercher">
-                          <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                            </button>
-                          </div>
-                        </div>
-                      </form>
-                </nav>
         <!-- Content -->
         <div id="main-content" class="main-content"></div>
         
@@ -285,83 +245,7 @@
                 </div>
             </div>
         </div>
-            
+        <?php include("footer.php"); ?>
 
-
-        <!-- Footer -->
-        <!-- Footer -->
-        <footer class="bg-dark text-center text-white container-fluid">
-            <!-- Grid container -->
-            <div class="container p-4 pb-0">
-                <div class="row">
-                    <div class="col-lg-4 col-md-9 mb-4 mb-md-0">
-                        <img src="./img/logo_afpa.jpeg" width=auto height="70" alt="logo">
-                    
-                    <p>
-                        L'AFPA, OPERATEUR MAJEUR DE LA FORMATION PROFESSIONNELLE DES ADULTES
-
-                        </p>
-                    </div>
-                    <div class="col-lg-4 col-md-9 mb-4 mb-md-0">
-                        
-                        <!-- Section: CTA -->
-                        <div class="">
-                            <p class="d-flex justify-content-center align-items-center">
-                            <span class="me-3">Recevoir nos actualités</span>
-                            <!--<button type="button" >-->
-                                <a class="btn btn-outline-light btn-rounded" href="./inscription.html"> Inscrivez-vous !</a>
-                            <!--</button>-->
-                            </p>
-                        </div>
-                        <div class="text-left">
-                            <h5>Contact</h5>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-map-marker-alt"></i>244 Route de Turin</li>
-                                <li>06300 Nice</li>
-                                <li>Benoit Hézard</li>
-                                <li><i class="fas fa-phone"></i>04 93 27 63 00</li>
-                                <li><i class="fas fa-envelope"></i><a href="mailto: benoit.hezard@afpa.fr" target="_blank">benoit.hezard@afpa.fr</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-9 mb-4 mb-md-0">
-                        <h5>Nous Suivre :</h5>
-                        <!-- Section: Social media -->
-                        <div class="mb-4">
-                            <!-- Facebook -->
-                            <a class="btn btn-outline-light btn-floating m-1 follow_icone" href="https://www.facebook.com/AFPA.JEUNES" role="button"
-                            ><i class="fab fa-facebook-f"></i
-                            ></a>
-                    
-                            <!-- Twitter -->
-                            <a class="btn btn-outline-light btn-floating m-1 follow_icone" href="https://twitter.com/afpa_formation" role="button"
-                            ><i class="fab fa-twitter"></i
-                            ></a>
-                    
-                            <!-- Linkedin -->
-                            <a class="btn btn-outline-light btn-floating m-1 follow_icone" href="https://www.linkedin.com/school/afpa/" role="button"
-                            ><i class="fab fa-linkedin-in"></i
-                            ></a>
-                    
-                            </div>
-                        <!-- Section: Social media -->
-                    </div>
-                </div>
-                
-                
-            </div>
-            <!-- Grid container -->
-            
-            <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                © 2021 Copyright:
-                <a class="text-white">Léa Dieudonat</a>
-            </div>
-        </footer>
-
-        <!-- JS -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/slide.js"></script>
     </body>
 </html>

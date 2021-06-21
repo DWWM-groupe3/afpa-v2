@@ -13,6 +13,10 @@
         <!-- Style -->
         <link rel="stylesheet" href="main.css">
 
+        <!-- JS -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+        <script src="main.js" defer></script>
+
         <!-- jQuery, Popper.js, Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer></script>
@@ -92,7 +96,7 @@
                     </div>
                 </div>
             </div>
-
+            <?php include("footer.php"); ?>
         <!-- JS -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="js/main.js"></script>

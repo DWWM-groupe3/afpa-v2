@@ -1,6 +1,10 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
 /*$grey: #7c7c7c;*/
+.white-bg {
+  background-color: #FFFFFF;
+}
+
 .grey-bg {
   background-color: #485550;
 }
@@ -30,37 +34,46 @@ footer {
   margin: 0;
 }
 
-nav {
+#navbarContent {
+  margin-right: 0;
   font-variant: small-caps;
   font-weight: bold;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: stretch;
 }
 
-nav button.navbar-toggler {
+#navbarContent button.navbar-toggler {
   margin-right: 1em;
 }
 
-nav :nth-child(3) {
-  flex: 1;
+#navbarContent button[type="submit"] {
+  border-radius: 5px 0 0 5px;
+  border: none;
 }
 
-nav button[type="submit"] {
-  background-color: #FFFFFF;
-  border-radius: 0 5px 5px 0;
-}
-
-nav a {
-  color: #FFFFFF;
-}
-
-nav a:hover {
+#navbarContent button[type="submit"] i:hover {
   color: #8FCD4A;
 }
 
-nav li.active {
-  border-radius: 10px;
+#navbarContent input[type="text"] {
+  border: none;
+}
+
+#navbarContent a {
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+#navbarContent a:hover {
+  color: #8FCD4A;
+}
+
+#navbarContent ul {
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
 }
 
 /*
@@ -330,6 +343,10 @@ section {
   border: none;
 }
 
+.bottom-border {
+  border-bottom: 1px solid #333;
+}
+
 .shadow {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
@@ -429,7 +446,8 @@ q {
 }
 
 /* ------------------ Inscription --------------------- */
-#inscription-title {
+#inscription-title, #connexion-title {
+  margin-top: 1em;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -446,10 +464,12 @@ q {
 .inscription-form input {
   height: 2em;
   width: 50%;
+  border-radius: 0;
 }
 
 .inscription-form input:hover {
   background-color: #F4F6F0;
+  border-bottom: 3px solid #8FCD4A;
 }
 
 .inscription-form input[type="submit"] {

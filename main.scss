@@ -8,6 +8,10 @@ $green: #8FCD4A;
 $cream: #fffdd8;
 $shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
+.white-bg {
+    background-color: $white;
+}
+
 .grey-bg {
     background-color: $grey;
 }
@@ -38,30 +42,44 @@ body {
 footer {
     margin: 0;
 }
-nav {
+
+#navbarContent {
+    margin-right: 0;
     font-variant: small-caps;
     font-weight: bold;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: stretch;
     button.navbar-toggler {
         margin-right: 1em;
     }
-    :nth-child(3) {
-        flex: 1;
-    }
+
     button[type="submit"] {
-        background-color: $white;
-        border-radius: 0 5px 5px 0;
+        //background-color: $white;
+        border-radius: 5px 0 0 5px;
+        border: none;
+        i {
+            &:hover {
+                color: $green;
+            }
+        }
+    }
+    input[type="text"] {
+        border: none;
     }
     a {
         color: $white;
+        white-space: nowrap;
         &:hover {
             color: $green;
         }
     }
-    li.active {
-        border-radius: 10px;
+
+    ul {
+        width: fit-content;
+        display: flex;
+        justify-content: space-between;
     }
 }
 
@@ -323,6 +341,9 @@ nav {
         border: none;
     }
 
+    .bottom-border {
+        border-bottom: 1px solid #333;
+    }
     .shadow {
         box-shadow: $shadow;
     }
@@ -420,7 +441,8 @@ nav {
   .author {color: cornflowerblue;}
 
 /* ------------------ Inscription --------------------- */
-#inscription-title {
+#inscription-title,#connexion-title {
+    margin-top: 1em;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -433,8 +455,10 @@ nav {
     input {
         height: 2em;
         width: 50%;
+        border-radius: 0;
         &:hover {
             background-color: $grey-light;
+            border-bottom: 3px solid $green;
         }
         }
     input[type="submit"] {

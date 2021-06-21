@@ -14,55 +14,14 @@
 
     <!-- Style -->
     <link rel="stylesheet" href="main.css">
+
+    <!-- JS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
   <!-- Header -->
-  <nav class="container-fluid navbar navbar-expand-lg navbar-dark grey-bg">
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="navbarContent" class="collapse navbar-collapse">
-      <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Activités
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#orientation">Orientation</a>
-                  <a class="dropdown-item" href="#formation">Formation</a>
-
-                </div>
-            </li>
-            <li class="nav-item">
-                <a id="contact-page" class="nav-link" href="#">Contact</a>
-            </li>
-            <li class="nav-item">
-                <a class="btn btn-outline-light btn-rounded" href="./inscription.html">Je m'inscris</a>
-            </li>
-      </ul>
-    </div>
-    <div class="navbar-header">
-      <a class="navbar-brand" href="https://www.afpa.fr/">
-        <div class="header-logo"></div>
-          
-      </a>
-    </div>
-    <form class="navbar-form navbar-left">
-        <!-- <form class="navbar-form navbar-left" action="/action_page.php"> -->
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Chercher">
-          <div class="input-group-btn">
-            <button class="btn btn-default" type="submit">
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-          </div>
-        </div>
-    </form>
-  </nav>
+  <?php include("nav.php"); ?>
 
 
   <!-- Content -->
@@ -117,6 +76,23 @@
                                 </div>
                             </div>
                             
+                            <div class="input-group">
+                              <input type="password" id="pwd" name="pwd" class="form-control no_border bottom-border" placeholder="Password" autofocus required>
+                              <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                  <i class="fas fa-key"></i>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="input-group">
+                              <input type="password" id="confirmation" class="form-control no_border bottom-border" placeholder="Confirmation" autofocus required/>
+                              <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                  <i class="fas fa-key"></i>
+                                </button>
+                              </div>
+                            </div>
+
 
                             <div class="input-group">
                                 <input type="text" name="tel" id="tel" class="form-control" placeholder="Téléphone" class="no_border" autofocus required>
@@ -126,9 +102,18 @@
                                   </button>
                                 </div>
                             </div>
+                            <input type="date" id="birthday" name="birthday">
+
+                            <div class="input-group text-left">
+                              <input type="checkbox" id="conditions" name="conditions" value="Conditions" required>
+                              <label for="conditions"> J'ai lu et j'accepte les <a href="#">Conditions Générales d'Utilisation</a> et la <a href="#">Politique de Protection des Données Personnelles</a>.</label><br>
+                            </div>
+
                             
-                            
+                            <input type="checkbox" id="offres" name="offres" value="Offres">
+                            <label for="offres"> J'aimerais recevoir des offres de formations pertinentes de l'AFPA.</label><br>
                             <input type="submit" value="OK" />
+                            <div>Vous avez déjà un compte? <a href="#">Connectez-vous.</a></div>
                         </div>
 
                         
@@ -138,6 +123,6 @@
             </div>
         </div>
     </div>
-
+    <?php include("footer.php"); ?>
 </body>
 </html>
