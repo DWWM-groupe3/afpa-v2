@@ -1,28 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Afpa</title>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Boostrap -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<?php $title = 'Contact'; ?>
+<?php ob_start(); ?>
 
-        <!--Font awesome icons-->
-        <script src="https://kit.fontawesome.com/eaf337826d.js" crossorigin="anonymous"></script>
-
-        <!-- Style -->
-        <link rel="stylesheet" href="main.css">
-
-        <!-- JS -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
-        <script src="main.js" defer></script>
-
-        <!-- jQuery, Popper.js, Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer></script>
-    </head>
-    <body>
 <!-- Contact -->
             <div class="container-fluid green-bg">
                 <div class="row">
@@ -52,13 +30,12 @@
                                             <li><i class="fas fa-phone"></i>04 93 27 63 00</li>
                                             <li><i class="fas fa-envelope"></i><a href="mailto: benoit.hezard@afpa.fr" target="_blank">benoit.hezard@afpa.fr</a></li>
                                         </ul>
-                                    </li>
                                 </div>
                         </div>
                         <div class="col-12 col-lg-6">
             
                                 <h3>Vos coordonnées</h3>
-                                <form method="post" action="traitement.php">
+                                <form method="post" action="">
                                     <fieldset>
                                         
                     
@@ -96,10 +73,8 @@
                     </div>
                 </div>
             </div>
-            <?php include("footer.php"); ?>
-        <!-- JS -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/slide.js"></script>
-    </body>
-</html>
+
+<?php
+$content = ob_get_clean();
+require('template.php'); 
+?>

@@ -5,7 +5,7 @@
     <div class="container p-4 pb-0">
         <div class="row">
             <div class="col-lg-4 col-md-9 mb-4 mb-md-0">
-                <img src="./img/logo_afpa.jpeg" width=auto height="70" alt="logo">
+                <img src="./img/logo.png" width=auto height="70" alt="logo">
             
             <p>
                 L'AFPA, OPERATEUR MAJEUR DE LA FORMATION PROFESSIONNELLE DES ADULTES
@@ -26,11 +26,11 @@
                 <div class="text-left">
                     <h5>Contact</h5>
                     <ul class="list-unstyled">
-                        <li><i class="fas fa-map-marker-alt"></i>244 Route de Turin</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 244 Route de Turin</li>
                         <li>06300 Nice</li>
                         <li>Benoit Hézard</li>
-                        <li><i class="fas fa-phone"></i>04 93 27 63 00</li>
-                        <li><i class="fas fa-envelope"></i><a href="mailto: benoit.hezard@afpa.fr" target="_blank">benoit.hezard@afpa.fr</a></li>
+                        <li><i class="fas fa-phone"></i> 04 93 27 63 00</li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto: benoit.hezard@afpa.fr" target="_blank">benoit.hezard@afpa.fr</a></li>
                     </ul>
                 </div>
             </div>

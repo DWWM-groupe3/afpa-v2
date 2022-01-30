@@ -8,6 +8,8 @@ $green: #8FCD4A;
 $cream: #fffdd8;
 $shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
+
+
 .white-bg {
     background-color: $white;
 }
@@ -18,7 +20,7 @@ $shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
 .green-bg {
     //background-color: $green;
-    background: url(./img/svg/wave.svg);
+    background: url(../img/svg/wave.svg);
     background-repeat: no-repeat;
     //background-size: 50em;
     background-position-y: top;
@@ -32,11 +34,13 @@ $shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     margin-bottom: 3em;
 }
 
-body {
+html, body {
     margin: 0;
-    font-family: 'Montserrat';
     width: 100%;
     height: 100%;
+}
+body {
+    font-family: 'Montserrat';
   }
 
 footer {
@@ -83,41 +87,9 @@ footer {
     }
 }
 
-/*
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content: center;
-    height: auto;
-    width: 20em;
-    margin-right: 1em;
-    overflow: hidden;
-    a {
-        color: $white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        &:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        &:active {
-            background-color: royalblue;
-            color: $white;
-        }
-    }
-}
 
-.nav__user {
-    background-color: $white;
-    color: $grey;
-    border-radius: 5px;
-}
-*/
     .header-logo {
-        background-image: url('./img/logo-AFPA.jpeg');
+        background-image: url('../img/logo-AFPA.jpeg');
         background-size: 140%;
         background-repeat: no-repeat;
         background-position: center;
@@ -170,7 +142,7 @@ nav {
     }
 
     .welcome_section {
-        background-image: url('./img/background.png');
+        background-image: url('../img/background.png');
         background-repeat: no-repeat;
         background-size: cover;
         display: flex;
@@ -255,24 +227,24 @@ nav {
 
     
 .bg-informatique {
-    background-image: url('./img/informatique.jpeg');
+    background-image: url('../img/informatique.jpeg');
     background-size: cover;
     margin-bottom: 1em;
 }
 .bg-hotel {
-    background-image: url('./img/hôtel.jpeg');
+    background-image: url('../img/hôtel.jpeg');
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 1em;
 }
 .bg-textile {
-    background-image: url('./img/textile.jpeg');
+    background-image: url('../img/textile.jpeg');
     background-size: cover;
     margin-bottom: 1em;
 }
 .bg-vente {
-    background-image: url('./img/grocery.jpeg');
+    background-image: url('../img/grocery.jpeg');
     background-size: cover;
     margin-bottom: 1em;
 }
@@ -290,13 +262,13 @@ nav {
     }
     */
     .formation__textile {
-        background-image: url('./img/textile.jpeg');
+        background-image: url('../img/textile.jpeg');
     }
     .formation__vente {
-        background-image: url('./img/grocery.jpeg');
+        background-image: url('../img/grocery.jpeg');
     }
     .formation__hotel {
-        background-image: url('./img/hôtel.jpeg');
+        background-image: url('../img/hôtel.jpeg');
     }
     
     .left {

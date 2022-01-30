@@ -1,35 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Afpa</title>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Boostrap -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<?php $title = 'Afpa'; ?>
 
-        <!--Font awesome icons-->
-        <script src="https://kit.fontawesome.com/eaf337826d.js" crossorigin="anonymous"></script>
+<?php ob_start(); ?>
 
-
-
-        <!-- JS -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
-        <script src="main.js" defer></script>
-        <script src="slide.js" defer></script>
-
-        <!-- jQuery, Popper.js, Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer></script>
-
-        <!-- Style -->
-        <link rel="stylesheet" href="main.css">
-    </head>
-    <body>
-        <!-- Nav -->
-        <!--<div id="nav-content" class="nav-content"></div>-->
-
-        <?php include("nav.php"); ?>
 
         <!-- Content -->
         <div id="main-content" class="main-content"></div>
@@ -134,7 +106,7 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-lg-6 col-12">
                         <div class="card bg-informatique">
                             <div class="card blur-box">
                                 <h3 class="card-title">Un Centre à la pointe de l’Informatique</h3>
@@ -148,7 +120,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-lg-6 col-12">
                         <div class="card bg-hotel">
                             <div class="card blur-box">
                                 <h3 class="card-title">Une Référence pour les métiers de l’hôtellerie</h3>
@@ -162,7 +134,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-lg-6 col-12">
                         <div class="card bg-textile">
                             <div class="card blur-box">
                                 <h2 class="card-title">Les formations de demain dans l’industrie du textile</h2>
@@ -177,7 +149,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-lg-6 col-12">
                         <div class="card bg-vente">
                             <div class="card blur-box">
                                 <h3 class="card-title">Des méthodes éprouvées en vente et distribution</h3>
@@ -245,7 +217,8 @@
                 </div>
             </div>
         </div>
-        <?php include("footer.php"); ?>
 
-    </body>
-</html>
+<?php
+$content = ob_get_clean();
+require('template.php');
+?>

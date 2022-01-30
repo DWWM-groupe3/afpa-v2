@@ -1,27 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription</title>
+<?php $title = 'Inscription Afpa'; ?>
 
-    <!-- Boostrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <!--Font awesome icons-->
-    <script src="https://kit.fontawesome.com/eaf337826d.js" crossorigin="anonymous"></script>
-
-    <!-- Style -->
-    <link rel="stylesheet" href="main.css">
-
-    <!-- JS -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
-    <script src="main.js" defer></script>
-</head>
-<body>
-  <!-- Header -->
-  <?php include("nav.php"); ?>
+<?php ob_start(); ?>
 
 
   <!-- Content -->
@@ -32,13 +11,13 @@
                 <img src="./img/icone/swords.svg" alt="swords" height="15%">
                 <form autocomplete="on"class="inscription-form">
                 <!--<form method="post" action="traitement.php">-->
-                    <fieldset>
+                    <fieldset class="d-flex flex-column align-items-center">
                         <legend>Devenir Stagiaire</legend>
                         
                         
                         <div class="inscription-info">
                             <div>Vous souhaitez intégrer l'une de nos <a href="#">formations</a>?<br> Ce questionnaire nous permettra d'en apprendre plus sur vous<br> et de vous envoyer des informations pertinentes.</div>
-                            <hr>
+                            
                             <select id="formation" name="formation">
                                 <option value="" disabled selected>Selectionner votre formation</option>
                                 <option value="informatique">Informatique</option>
@@ -104,16 +83,15 @@
                             </div>
                             <input type="date" id="birthday" name="birthday">
 
-                            <div class="input-group text-left">
+                            <div class="input-group">
                               <input type="checkbox" id="conditions" name="conditions" value="Conditions" required>
-                              <label for="conditions"> J'ai lu et j'accepte les <a href="#">Conditions Générales d'Utilisation</a> et la <a href="#">Politique de Protection des Données Personnelles</a>.</label><br>
+                              <label> J'ai lu et j'accepte les <a href="#">Conditions Générales d'Utilisation</a><br> et la <a href="#">Politique de Protection des Données Personnelles</a>.</label><br>
                             </div>
 
-                            
                             <input type="checkbox" id="offres" name="offres" value="Offres">
                             <label for="offres"> J'aimerais recevoir des offres de formations pertinentes de l'AFPA.</label><br>
                             <input type="submit" value="OK" />
-                            <div>Vous avez déjà un compte? <a href="#">Connectez-vous.</a></div>
+                            <div>Vous avez déjà un compte? <a href="connexion.php">Connectez-vous.</a></div>
                         </div>
 
                         
@@ -123,6 +101,11 @@
             </div>
         </div>
     </div>
-    <?php include("footer.php"); ?>
-</body>
-</html>
+
+<?php 
+
+$content = ob_get_clean();
+
+require('template.php'); 
+
+?>
