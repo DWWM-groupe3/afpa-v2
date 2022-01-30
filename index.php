@@ -4,33 +4,19 @@
 
 
         <!-- Content -->
-        <div id="main-content" class="main-content"></div>
         
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
+        <div class="container-fluid welcome_section" id="accueil">
+
                     
-                    <h1>Accueil</h1>
-                    
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <section class="col-12 welcome_section">
                             <div><h2 class="welcome_h2">Les Prestations du centre Afpa</h2></div>
                             <div>
                                 <button class="button-resp"><a href="#contact">En savoir plus</a></button>
                             </div>
                             <div>
-                                <a href="#activité">
-                                <img src="img/icone/arrow.png" class="icone arrow">
-                                </a>
+                                <a href="#activité" id="arrow" style="color: white;"><i class="fas fa-chevron-down fa-3x"></i></a>
                                 
                             </div>
                         
-                    </section>
-                </div>
-            </div>
         </div>    
             <!-- Orientation -->
         <div class="container-fluid green-bg">
